@@ -3,20 +3,50 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie-edge"> <!--offers support for older versions internet explorer and eliminate validation errors in html-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% endblock %}
 
-    
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% endblock %}
 
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    {% endblock %}
 
-    <title>Boutique Ado</title>
+    {% extra_js %}
+    {% endblock %}
+
+    <title>Boutique Ado {% block extra_title %}{% endblock %}</title> <!--add extra information to the title eg "boutique ado- products-->
   </head>
   <body>
-        
+    <header class="container-fluid fixed-top"></header>
+
+    {% if messages %} <!--place to display messages from Django-->
+        <div class="message-container"></div>
+    {% endif %}
+
+    {% block page_header %} <!--act as additional header-->
+    {% endblock %}
+
+    {% block content %}<!--place for main page content-->
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
+    
+
+
   </body>
 </html>
