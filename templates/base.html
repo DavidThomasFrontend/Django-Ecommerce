@@ -25,7 +25,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     {% endblock %}
 
-    {% extra_js %}
+    {% block extra_js %}
     {% endblock %}
 
     <title>Boutique Ado {% block extra_title %}{% endblock %}</title> <!--add extra information to the title eg "boutique ado- products-->
@@ -43,9 +43,9 @@
     {% block content %}<!--place for main page content-->
     {% endblock %}
 
-    {% block postloadjs %}
+    {% block postloadjs %}<!--place to load javascript at -->
     {% endblock %}
-    
+
 
 
   </body>
