@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.account',  # allows basic user account stuff like logging in and out, user registration and password resets
     'allauth.socialaccount',  # handles logging in via social media providers
     'home',
+    'products',
 ]
 
 MIDDLEWARE = [
