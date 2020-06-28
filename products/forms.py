@@ -6,12 +6,10 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        #this means all fields#
         fields = '__all__'
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        #get all categories#
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
