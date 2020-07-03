@@ -27,7 +27,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 
 
-ALLOWED_HOSTS = ['dthomas-boutique-ado.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['https://dthomas-boutique-ado.herokuapp.com/', 'localhost']
 
 
 # Application definition
